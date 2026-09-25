@@ -1,0 +1,14 @@
+[Unit]
+Description=Періодична перевірка та публікація в Pinterest
+
+[Timer]
+# Перевіряє готовність до посту раз на 15 хв.
+OnBootSec=5min
+OnUnitActiveSec=15min
+# Невеликий випадковий зсув самого запуску таймера — додаткова природність
+# поверх рандомізації 5-6 год всередині scheduler.py.
+RandomizedDelaySec=3min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

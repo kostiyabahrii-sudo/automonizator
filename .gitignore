@@ -1,0 +1,16 @@
+.env
+config.yaml
+state/state.json
+logs/*.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# готові файли користувача — не комітимо реальні картинки
+posts/pending/*
+posts/posted/*
+posts/failed/*
+!posts/pending/.gitkeep
+!posts/posted/.gitkeep
+!posts/failed/.gitkeep

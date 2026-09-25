@@ -1,0 +1,7 @@
+[Unit]
+Description=Pinterest auto-poster (одноразовий запуск-перевірка)
+
+[Service]
+Type=oneshot
+WorkingDirectory=/ШЛЯХ/ДО/automonizator
+ExecStart=/usr/bin/python3 -m pinterest_autopost.scheduler
