@@ -98,7 +98,7 @@ class PinterestClient:
         body: dict[str, Any] = {
             "board_id": board_id,
             "title": title[:100],
-            "description": description[:800],
+            "description": description[:500],
             "media_source": {
                 "source_type": "image_base64",
                 "content_type": content_type,
