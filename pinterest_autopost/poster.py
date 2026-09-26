@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import logging
+from logging.handlers import RotatingFileHandler
 import random
 import re
 import shutil
@@ -18,7 +19,10 @@ def setup_logging(log_file: Path) -> None:
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
-        handlers=[logging.FileHandler(log_file, encoding="utf-8"), logging.StreamHandler()],
+        handlers=[
+            RotatingFileHandler(log_file, maxBytes=1024*1024, backupCount=5, encoding="utf-8"),
+            logging.StreamHandler()
+        ],
     )
 
 
